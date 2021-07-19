@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+    <img width="300" src={{book_data['picture']}} alt="Sorry, no image was found :(">
+    <p> {{book_data['name'] | safe}}</p>
+    <p>Жанр: {{book_data['genre'] | safe}}</p>
+    <p>Автор:  {{book_data['author'] | safe}}</p>
+    <a href={{book_data['url']}}>Больше информации о книге</a>
+    <br>
+    <br>
+    <form action="/main" method="POST">
+        <button>Найти другую книгу</button>
+    </form>
+</body>
+</html>
